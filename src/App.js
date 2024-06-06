@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+const Header = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&txt_keyword=All"
+          alt=" "
+        ></img>
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>My Cart</li>
+        </ul>
+      </div>
     </div>
   );
+};
+
+const RestuarantCard = () => {
+  return(
+    <div className="res-card">
+      <img className="res-logo" alt=" " src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/oycvffrrb3oyp2ncyn1n"></img>
+      <h3>Gopal Dosa</h3>
+      <h4>Dosa, Idli, Vada</h4>
+      <h4>4.4 stars</h4>
+      <h4>38 minutes</h4>
+    </div>
+  )
 }
 
-export default App;
+const Body = () => {
+  return (
+    <div>
+      <div className="searchbox">
+        <input type="text"></input>
+        <button>Search</button>
+      </div>
+      <div className="res-container">
+        <RestuarantCard/>
+        <RestuarantCard/>
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
+  return (
+    <div>
+      <Header />
+      <Body />
+    </div>
+  );
+};
+
+export default AppLayout;
