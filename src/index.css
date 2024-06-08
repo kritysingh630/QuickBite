@@ -20,7 +20,8 @@
   margin: 10px;
 }
 
-.filter-btn{
+.filter{
+  display: flex;
   padding: 10px;
   margin: 5px;
 }
@@ -61,4 +62,12 @@
   margin: 20px;
   width: 80px;
   cursor: pointer;
+}
+
+.filter{
+  display: flex;
+}
+
+.search-btn{
+  margin:0 10px;
 }
